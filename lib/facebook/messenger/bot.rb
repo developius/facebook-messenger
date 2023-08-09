@@ -54,6 +54,7 @@ module Facebook
           query = { access_token: access_token }
           query[:appsecret_proof] = app_secret_proof if app_secret_proof
 
+          pp JSON.dump(message)
           response = post '/messages',
                           body: JSON.dump(message),
                           format: :json,
