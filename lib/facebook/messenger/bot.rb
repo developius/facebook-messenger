@@ -12,6 +12,8 @@ module Facebook
     module Bot
       include HTTParty
 
+      logger ::Logger.new(STDOUT), :debug, :curl
+
       # Define base_uri for HTTParty.
       base_uri 'https://graph.facebook.com/v3.2/me'
 
